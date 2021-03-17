@@ -6,6 +6,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    overflow: hidden;
 }
 
 .wrapper {
@@ -50,7 +51,7 @@ body, html {
     top: -1%;
     left: 0;
     animation-name: drive;
-    animation-duration: 3s;
+    animation-duration: 2.8s;
     animation-fill-mode: both; /* Decides what to do with the animation outside the animation window*/
     animation-iteration-count: infinite;
     /* animation-delay: 3s; */
@@ -58,9 +59,33 @@ body, html {
 
 .mario-opponent {
     top: 50% !important;
-    animation-delay: 0.5s;
-    animation-duration: 2.5s;
+    animation-delay: 0.5s !important;
+    animation-duration: 2.5s !important;
     /* filter: saturate(0.2) blur(2px) opacity(0.5); */
+}
+
+.cloud {
+    position: absolute;
+    animation-name: wind;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    opacity: 0.5;
+}
+
+.cloud.middle-cloud {
+    height: 110px;
+    top: 20%;
+    left: 10.5%;
+    animation-duration: 50s;
+}
+
+.cloud:nth-child(3) {
+    width: 250px;
+    top: 10%;
+    left: -300px;
 }
 
 /* .mario:hover {
@@ -72,7 +97,12 @@ body, html {
 
 @keyframes drive {
     from{ transform: translateX(-200px)}
-    to{ transform: translateX(1000px);}
+    to{ transform: translateX(1800px);}
+}
+
+@keyframes wind {
+    from {left: -200px;}
+    to {left: 100%;}    
 }
 
 
