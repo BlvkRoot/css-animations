@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sky {
+    height: 40%;
+    background: darkturquoise;
+}
+
+.grass {
+    height: 30%;
+    background: rgb(1, 151, 101);
+}
+
+.road {
+    position: relative;
+    height: 30%;
+    background: rgb(91, 95, 95);
+    border-width: 0;
+    border-top-width: 15px !important;
+    border-bottom-width: 15px !important;
+    border-style: solid;
+    border-top-color: rgb(121, 120, 120);
+    border-bottom-color: rgb(121, 120, 120);
+    display: flex;
+    align-items: center;
+}
+
+.road > .lines {
+    width: 100%; 
+    border-color: rgb(255, 255, 255);
+    border-width: 6px;
+    border-style: dashed;
+}
+
+.mario {
+    position: absolute;
+    top: -1%;
+    left: 0;
+    animation-name: drive;
+    animation-duration: 3s;
+    animation-fill-mode: both; /* Decides what to do with the animation outside the animation window*/
+    animation-iteration-count: infinite;
+    /* animation-delay: 3s; */
+}
+
+.mario-opponent {
+    top: 50% !important;
+    animation-delay: 0.5s;
+    animation-duration: 2.5s;
+    /* filter: saturate(0.2) blur(2px) opacity(0.5); */
+}
+
+/* .mario:hover {
+    animation-name: drive;
+    animation-duration: 3s;
+} */
+
+/* KEYFRAMES */
+
+@keyframes drive {
+    from{ transform: translateX(-200px)}
+    to{ transform: translateX(1000px);}
+}
+
+
+
+
+
+

@@ -1,0 +1,84 @@
+body {
+    background: url('../img/bg.jpg') fixed no-repeat;
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+img{
+
+    /* transform: translate() => transitions element from X or Y axis */
+    /* transform: translate(300px, 200px); */
+
+    /* transform: scale() => shrink / stretch elements from X or Y axis */
+    /* transform: scale(1, 1); */
+
+    /* 
+        transform: rotate() => rotates elements using degrees e.g rotate(50deg) 
+        NB: if we simply rotateX OR rotateY, rotateZ the element will shrink respectively 
+
+        rotateZ() will rotate clockWise or AntiClockWise from the center
+        
+        transform: rotateX(-50deg); shrink on the X axis
+        transform: rotateY(-50deg); shrink on the Y axis
+        transform: rotateZ(-50deg); rotate clock/anticlockwise
+        transform: rotate(50deg); rotate clockwise
+    */
+
+    /* COMBINING DIFFERENT TRANSFORMS IN A SINGLE LINE */
+
+    /* transform: rotateZ(45deg) scale(1.5) translate(200px); */
+    /* transition: 1s; */
+
+    
+    left: 0px;
+    animation-name: moveClouds;
+    animation-fill-mode: both;
+}
+
+/* img:hover  {
+    transform: rotate(360deg);
+} */
+
+
+/*.transformImage {
+    transform: rotate3D(45deg) scale(0.5) translate(200px);
+
+}*/
+
+.circle {
+    color: rgb(255, 255, 255);
+    background-color: rgb(193, 142, 241);
+    width: 100px;
+    padding: 50px 0;
+    margin: 60px auto;
+    border-radius: 50%;
+    line-height: 0;
+    cursor: pointer;
+    transition: background 1s, transform 1s, color 1s 1s ease-in-out;
+}
+
+.circle:hover {
+    background: darkmagenta;
+    transform: rotate(360deg);
+    color: darkorange;
+    
+    
+}
+
+/* KEYFRAMES */
+
+@keyframes moveClouds {
+    from{ transform: translateX(0); }
+    to{ transform: translateX(150px); }
+}
