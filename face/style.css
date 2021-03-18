@@ -1,4 +1,4 @@
-body.pop__up{
+body{
     margin: 0;
     padding: 0;
     width: 100%;
@@ -6,64 +6,6 @@ body.pop__up{
     background: rgb(58, 55, 55);
     text-align: center;
 }
-
-p {
-    text-align: left;
-    text-overflow: clip;
-    font-size: 15px;
-    margin-bottom: 20px;
-}
-
-#pop__up{
-    position: relative;
-    top: 50px;
-    width: 500px;
-    margin: 0 auto;
-}
-#pop__up .container {
-    position: absolute;
-    top: 50px;
-    box-sizing: border-box;
-    border: 1px solid rgb(197, 197, 197);
-    border-radius: 5px;
-    background: rgb(247, 225, 194);
-    /* background: rgb(247, 225, 194); */
-    padding: 20px;
-    
-}
-
-#pop__up input {
-    /* position: absolute; */
-    border-width: 1px;
-    border-radius: 5px;
-    height: 26px;
-    left: 100px;
-}
-
-button {
-    /* position: absolute; */
-    border-width: 0;
-    border-radius: 0 6px 6px 0;
-    height: 30px;
-    top: 82.7%;
-    left: 270px;
-    color: #fff;
-    background-color: #000;
-    margin-left: -20px;
-}
-
-.cross {
-    position: absolute;
-    top: 4.5%;
-    left: 10px;
-    color: #fff;
-    width: 20px;
-    border-radius: 50%;
-    background: rgb(105, 98, 98);
-    font-size: 15px;
-    text-align: center;
-}
-
 
 /* Circles style */
 
@@ -186,28 +128,6 @@ button {
     background: rgb(224, 184, 5);
     transform: rotateZ(80deg);
     border-radius: 50%;
-}
-
-/* POPUP Animation Styles */
-
-#pop__up {
-    top: -400px;
-    transform-origin: 20px 20px;
-    animation: drop 1.5s ease forwards, 
-                swing 2s 3s ease;
-}
-
-@keyframes drop {
-    0%{ opacity: 0;}
-    70%{ transform: translateY(700px);}
-    100%{ transform: translateY(650px); opacity: 1;}
-}
-
-@keyframes swing {
-    0%{ transform: translateY(650px) rotateZ(0deg);}
-    40%{ transform: translateY(650px) rotateZ(90deg);}
-    70%{ transform: translateY(650px) rotateZ(70deg);}
-    100%{ transform: translateY(650px) rotateZ(74deg);}
 }
 
 @keyframes blink-pupil {
