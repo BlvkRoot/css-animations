@@ -23,9 +23,11 @@ body{
     border-radius: 50%;
     margin: 2px;
     animation: falling-balls 2s 1.5s linear infinite;
+    opacity: 0.1;
 }
 .circles .circle.red{
     background: rgb(207, 8, 8);
+
 }
 .circles .circle.orange{
     background: rgb(255, 175, 1);
